@@ -16,3 +16,22 @@ void setup();
 void draw();
 void input();
 void logic();
+
+int main(){
+    char start;
+    cout << "\t-------------------------------" << endl;
+    cout << "\t\t :Snake King:" << endl;
+    cout << "\t-------------------------------" << endl;
+    cout << "\tPress 's' to option: ";
+    cin >> start;
+    if(start == 's'){
+        setup();
+        while(!gameOver){
+            draw();
+            input();
+            logic();
+            Sleep(30);
+            system("cls");
+        }
+    }
+}
