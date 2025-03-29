@@ -80,3 +80,7 @@ void draw(){
                         print = true;
                     }
                 }
+                 // space
+                 if(!print){
+                    cout << " ";
+                }
