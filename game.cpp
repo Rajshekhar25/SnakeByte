@@ -45,3 +45,38 @@ void setup(){
     fruitY = rand()%height;
     score = 0;
 }
+
+void draw(){
+    system("cls");
+    // Uper Border
+    cout << "\t\t";
+    for(int i = 0; i < width-8; i++){
+        cout << "||";
+    }
+    cout << endl;
+
+    // Snake, fruit, space and side borders
+    for(int i = 0; i < height; i++){
+        for(int j = 0; j < width; j++){
+            // left border
+            if(j == 0){
+                cout << "\t\t||";
+            }
+            // snake head
+            if(i == headY && j == headX){
+                cout << "O";
+            }
+            // fruit
+            else if(i == fruitY && j == fruitX){
+                cout << "*";
+            }
+            // space, snake tail
+            else{
+                bool print = false;
+                // tail
+                for(int k = 0; k < tail_len; k++){
+                    if(tailx[k] == j && taily[k] == i){
+                        cout << "o";
+                        print = true;
+                    }
+                }
