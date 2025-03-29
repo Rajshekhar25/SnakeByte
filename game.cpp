@@ -102,3 +102,25 @@ void draw(){
         cout << endl;
         cout << "\t\t\tScore: " << score << endl;
     }
+
+    
+    void input(){
+        if(_kbhit())
+        switch (getch())
+        {
+        case 'a':
+            dir = LEFT;
+            break;
+        case 'd':
+            dir = RIGHT;
+            break;
+        case 'w':
+            dir = UP;
+            break;
+        case 's':
+            dir = DOWN;
+            break;    
+        default:
+            break;
+        }
+    }
