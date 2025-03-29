@@ -103,7 +103,7 @@ void draw(){
         cout << "\t\t\tScore: " << score << endl;
     }
 
-    
+
     void input(){
         if(_kbhit())
         switch (getch())
@@ -124,3 +124,20 @@ void draw(){
             break;
         }
     }
+
+    
+    void logic(){
+        // tail logic
+        int prevx = tailx[0];
+        int prevy = taily[0];
+        int prev2x, prev2y;
+        tailx[0] = headX;
+        taily[0] = headY;
+        for(int i = 1; i < tail_len; i++){
+            prev2x = tailx[i];
+            prev2y = taily[i];
+            tailx[i] = prevx;
+            taily[i] = prevy;
+            prevx = prev2x;
+            prevy = prev2y;
+        }
