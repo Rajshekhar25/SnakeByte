@@ -84,3 +84,12 @@ void draw(){
                  if(!print){
                     cout << " ";
                 }
+
+            } 
+            // right border
+            if(j == width-1){
+                cout << "||";
+            }
+        }
+        cout << endl;
+    }
