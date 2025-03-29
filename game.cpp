@@ -93,3 +93,12 @@ void draw(){
         }
         cout << endl;
     }
+
+        // Lower Border
+        cout << "\t\t";
+        for(int i = 0; i < width-8; i++){
+            cout << "||";
+        }
+        cout << endl;
+        cout << "\t\t\tScore: " << score << endl;
+    }
