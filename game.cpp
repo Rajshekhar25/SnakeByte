@@ -141,5 +141,22 @@ void draw(){
             prevy = prev2y;
         }
 
-
+    // direction logic
+    switch (dir)
+    {
+    case LEFT:
+        headX--;
+        break;
+    case RIGHT:
+        headX++;
+        break;
+    case UP:
+        headY--;
+        break;
+    case DOWN:
+        headY++;
+        break;
+    default:
+        break;
+    }
         
