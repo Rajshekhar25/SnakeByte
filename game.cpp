@@ -159,4 +159,18 @@ void draw(){
     default:
         break;
     }
+
+        // touch walls
+        if(headX >= width){
+            headX = 0;
+        }
+        else if(headX < 0){
+            headX = width - 1;
+        }
+        if(headY >= height){
+            headY = 0;
+        }
+        else if(headY < 0){
+            headY = height - 1;
+        }
         
