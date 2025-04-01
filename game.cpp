@@ -180,4 +180,13 @@ void draw(){
             gameOver = true;
         }
     }
-        
+ 
+        // snake eat fruit
+        if(headX == fruitX && headY == fruitY){
+            score += 10;
+            fruitX = rand()%width;
+            fruitY = rand()%height;
+            tail_len++;
+        }
+    
+    }
