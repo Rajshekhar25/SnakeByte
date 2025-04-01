@@ -173,4 +173,11 @@ void draw(){
         else if(headY < 0){
             headY = height - 1;
         }
+
+    // snake bite itself
+    for(int i = 0; i < tail_len; i++){
+        if(tailx[i] == headX && taily[i] == headY){
+            gameOver = true;
+        }
+    }
         
